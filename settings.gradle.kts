@@ -16,3 +16,5 @@ pluginManagement {
 }
 
 rootProject.name = "money"
+
+include(":money-core")
