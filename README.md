@@ -1,32 +1,12 @@
-# ViewModel
+# Money
 ![badge][badge-maven] ![badge][badge-mpp] ![badge][badge-android] ![badge][badge-js] ![badge][badge-jvm]
 
-A kotlin multiplatform solution to logging
-
-## Samples
-```kotlin
-class CounterViewModel : VModel<Intent, State>(State(0)) {
-
-    data class State(val value: Int)
-
-    sealed class Intent {
-        data class CountUp(val by: Int) : Intent()
-        data class CountDown(val by: Int) : Intent()
-    }
-
-    override fun execute(i: Intent) = when (i) {
-        is Intent.CountUp -> ui.value = State(value = ui.value.value + i.by)
-        is Intent.CountDown -> ui.value = State(value = ui.value.value - i.by)
-    }
-}
-```
+A kotlin multiplatform way for handling money
 
 ## Setup: Gradle 
 ```kotlin
 dependencies {
-    implementation("tz.co.asoft:viewmodel-core:0.0.1") //
-    // or
-    implementation("tz.co.asoft:viewmodel-react:0.0.1") // if using intended to be used in kotlin/react 
+    implementation("tz.co.asoft:money-core:0.0.1") 
 }
 ```
 [badge-maven]: https://img.shields.io/maven-central/v/tz.co.asoft/test/1.0.1?style=flat
