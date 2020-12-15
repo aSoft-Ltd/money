@@ -7,7 +7,7 @@ object vers {
     }
 
     object asoft {
-        val money = "0.0.1"
+        val money = "0.0.2"
         val builders = "1.1.1"
         val test = "1.0.1"
     }
