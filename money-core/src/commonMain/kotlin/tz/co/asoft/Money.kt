@@ -44,7 +44,7 @@ data class Money internal constructor(val value: Long, val cur: Currency) : Comp
         val amount = floor(value.toDouble() * 100) / (100 * cur.smallestUnitMultiplier)
         val splits = amount.toString(places = 2).split(".")
         val characteristic = splits[0]
-        var mantisa = splits.elementAtOrElse(1) { "0" }
+        var mantisa = splits.getOrElse(1) { "0" }
         while (mantisa.length > 1 && mantisa.endsWith("0")) {
             mantisa = mantisa.substringBeforeLast("0")
         }
